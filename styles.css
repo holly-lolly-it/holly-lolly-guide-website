@@ -1,0 +1,9 @@
+#header-logo {
+    min-width: 50px;
+}
+
+@media (max-width: 660px) {
+    #preview {
+        flex-direction: column;
+    }
+}
