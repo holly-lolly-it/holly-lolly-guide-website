@@ -17,6 +17,10 @@
     min-width: 30px;
 }
 
+.contain {
+    object-fit: contain;
+}
+
 @media (max-width: 660px) {
     #preview {
         flex-direction: column;

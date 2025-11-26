@@ -396,10 +396,6 @@ video {
 .z-50 {
 	z-index: 50;
 }
-.mx-auto {
-	margin-left: auto;
-	margin-right: auto;
-}
 .mb-12 {
 	margin-bottom: 3rem;
 }
@@ -439,6 +435,9 @@ video {
 .flex {
 	display: flex;
 }
+.flex-column {
+	flex-direction: column;
+}
 .inline-flex {
 	display: inline-flex;
 }
@@ -466,6 +465,9 @@ video {
 .h-8 {
 	height: 2rem;
 }
+.h-xl {
+	height: 40rem;
+}
 .min-h-screen {
 	min-height: 100vh;
 }
@@ -483,6 +485,9 @@ video {
 }
 .w-64 {
 	width: 16rem
+}
+.w-p-80 {
+	width: 80%;
 }
 .w-8 {
 	width: 2rem;
@@ -504,6 +509,15 @@ video {
 }
 .max-w-md {
 	max-width: 28rem;
+}
+.max-w-full {
+	max-width: 100%;
+}
+.max-h-7xl {
+	max-height: 80rem;
+}
+.max-h-full {
+	max-width: 100%;
 }
 .-rotate-12 {
 	--tw-rotate: -12deg;
@@ -674,6 +688,10 @@ video {
 	--tw-bg-opacity: 1;
 	background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
+.bg-white-9 {
+	--tw-bg-opacity: 0.9;
+	background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
 .bg-yellow-100 {
 	--tw-bg-opacity: 1;
 	background-color: rgb(254 249 195 / var(--tw-bg-opacity, 1));
@@ -716,6 +734,9 @@ video {
 }
 .object-cover {
 	object-fit: cover;
+}
+.object-contain {
+	object-fit: contain;
 }
 .object-top {
 	object-position: top;
@@ -972,5 +993,10 @@ video {
 	.lg\:px-8 {
 		padding-left: 2rem;
 		padding-right: 2rem;
+	}
+}
+@media (max-width: 640px) {
+	.w-p-80 {
+		width: 100%;
 	}
 }

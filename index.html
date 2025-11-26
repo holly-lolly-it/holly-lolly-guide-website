@@ -46,8 +46,8 @@
 
 <body id="start" class="bg-white text-gray-900 overflow-x-hidden" data-aos-easing="ease-in-out" data-aos-duration="800"
   data-aos-delay="0">
-  <header class="bg-white shadow-sm sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+  <header class="bg-white shadow-sm sticky top-0 z-50 flex items-center justify-center">
+    <div class="w-p-80 max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
       <div class="flex items-center justify-between">
         <div class="flex items-center space-x-4">
           <a href="#start" id="header-logo"
@@ -79,53 +79,57 @@
   </header>
 
   <main>
-    <section class="relative min-h-screen flex items-center parallax-bg" style="
-          background-image: linear-gradient(
-              rgba(233, 116, 68, 0.1),
-              rgba(244, 164, 96, 0.1)
-            ),
-            url('assets/background.jpg');
-          background-size: cover;
-          background-position: center;
-        ">
-      <div class="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent"></div>
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <section class="relative min-h-screen flex items-center justify-center parallax-bg max-w-full" style="
+              background-image: linear-gradient(
+                  rgba(233, 116, 68, 0.1),
+                  rgba(244, 164, 96, 0.1)
+                ),
+                url('assets/background.jpg');
+              background-size: cover;
+              background-position: center;
+            ">
+      <div class="relative max-w-7xl sm:px-6 lg:px-8 py-20 max-w-full">
         <div class="max-w-3xl">
-          <h1 class="text-5xl font-bold mb-6 gradient-text aos-init" data-aos="fade-up" data-aos-delay="200">
-            Привет, друзья! Если мечтаете о Японии — мой гид создан именно для вас!
-          </h1>
-          <p class="text-xl text-gray-700 mb-8 leading-relaxed aos-init" data-aos="fade-up" data-aos-delay="250">
-            Это не просто путеводитель. Это мой личный опыт, собранный в удобный формат: продуманные трёхэтапные
-            маршруты для разной физической подготовки, чтобы путешествие было комфортным для всех. Вас ждут лучшие места
-            Токио, Киото, Осаки и окрестностей Фудзи — только те точки, которые действительно стоит увидеть.<br>
-            Гид получился живым, искренним и не шаблонным — как разговор с другом в маленьком токийском кафе. Максимум
-            пользы и минимум скуки!<br>
-            Готовы открыть для себя настоящую Японию?
-            Забирайте гид и начинайте своё путешествие уже сегодня!
-          </p>
-          <div class="flex items-center space-x-4 mb-8 aos-init" data-aos="fade-up" data-aos-delay="300">
-            <div class="flex items-center space-x-2">
-              <div class="flex text-yellow-400">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
+          <div
+            class="relative backdrop-blur-md bg-white-9 p-8 md:p-12 rounded-3xl shadow-2xl border border-white/20 aos-init"
+            data-aos="fade-up" data-aos-delay="200">
+            <h1 class="text-4xl font-bold mb-6 gradient-text" >
+              Привет, друзья! Если мечтаете о Японии — мой гид создан именно для вас!
+            </h1>
+            <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+              Это не просто путеводитель. Это мой личный опыт, собранный в удобный формат: продуманные трёхэтапные
+              маршруты для разной физической подготовки, чтобы путешествие было комфортным для всех. Вас ждут лучшие места
+              Токио, Киото, Осаки и окрестностей Фудзи — только те точки, которые действительно стоит увидеть.<br>
+              Гид получился живым, искренним и не шаблонным — как разговор с другом в маленьком токийском кафе. Максимум
+              пользы и минимум скуки!<br>
+              Готовы открыть для себя настоящую Японию?
+              Забирайте гид и начинайте своё путешествие уже сегодня!
+            </p>
+            <div class="flex items-center space-x-4 mb-8">
+              <div class="flex items-center space-x-2">
+                <div class="flex text-yellow-400">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                </div>
+                <span class="text-gray-600 font-medium">66 отзывов</span>
               </div>
-              <span class="text-gray-600 font-medium">66 отзывов</span>
             </div>
+            <a href="#telegram"
+              class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-semibold !rounded-button hover:shadow-lg transform hover:scale-105 transition-all duration-300 whitespace-nowrap aos-init"
+              data-aos="fade-up" data-aos-delay="600">
+              <i class="ri-telegram-line ri-lg mr-3"></i>
+              Получить эксклюзивный доступ
+            </a>
           </div>
-          <a href="#telegram"
-            class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-semibold !rounded-button hover:shadow-lg transform hover:scale-105 transition-all duration-300 whitespace-nowrap aos-init"
-            data-aos="fade-up" data-aos-delay="600">
-            <i class="ri-telegram-line ri-lg mr-3"></i>
-            Получить эксклюзивный доступ
-          </a>
+    
         </div>
       </div>
     </section>
 
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-white flex items-center justify-center">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div data-aos="fade-right" class="aos-init">
@@ -169,20 +173,20 @@
               Готовы открыть Японию глубже и осознаннее? Тогда вам точно понравится мой гид.
             </p>
           </div>
-          <div class="relative aos-init" data-aos="fade-left">
+          <div class="relative aos-init max-h-7xl h-xl flex justify-center" data-aos="fade-left">
             <div class="absolute -inset-4 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl blur-2xl"></div>
             <img src="assets/say_hi.jpg" alt="Оля в Японии"
-              class="relative rounded-3xl object-cover object-top w-full h-96 shadow-2xl">
+              class="relative rounded-3xl object-contain object-top h-96 shadow-2xl max-h-full">
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-20 bg-gray-50 aos-init" data-aos="fade-up" data-aos-delay="200">
+    <section class="py-20 bg-gray-50 aos-init flex items-center justify-center" data-aos="fade-up" data-aos-delay="200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <h2 class="text-4xl font-bold mb-6 gradient-text">
-            Что включает гайд
+            Что включает гид
           </h2>
           <!-- <p class="text-xl text-gray-600 max-w-3xl mx-auto">
             Полное руководство с пошаговыми инструкциями для успешного
@@ -270,7 +274,7 @@
       </div>
     </section>
 
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-white flex items-center justify-center">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div data-aos="fade-right" class="aos-init">
@@ -351,10 +355,10 @@
           </div>
 
           <div class="grid grid-cols-2 gap-4 aos-init" data-aos="fade-left">
-            <img src="assets/contact.jpg" alt="HollyLolly создает контент"
-              class="rounded-2xl object-cover object-top w-full h-64" />
-            <img src="assets/japan-street.jpg" alt="Жизнь в Японии"
-              class="rounded-2xl object-cover object-top w-full h-64 mt-8" />
+            <img src="assets/contact.png" alt="HollyLolly создает контент"
+              class="rounded-2xl object-cover object-top w-full h-80" />
+            <img src="assets/japan-street.png" alt="Жизнь в Японии"
+              class="rounded-2xl object-cover object-top w-full h-80 mt-8" />
           </div>
         </div>
       </div>
@@ -412,7 +416,7 @@
       </div>
     </section> -->
 
-    <section class="py-20 bg-gray-50">
+    <section class="py-20 bg-gray-50 flex items-center justify-center">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16 aos-init" data-aos="fade-up">
           <h2 class="text-4xl font-bold mb-6 gradient-text">Вопрос-ответ</h2>
@@ -593,7 +597,7 @@
       </div>
     </section>
 
-    <section id="telegram" class="py-20 bg-gradient-to-br from-primary/10 to-secondary/10 relative overflow-hidden">
+    <section id="telegram" class="py-20 bg-gradient-to-br from-primary/10 to-secondary/10 relative flex items-center justify-center overflow-hidden">
       <div class="absolute inset-0 opacity-10">
         <div class="absolute top-10 left-10 w-20 h-20 bg-primary rounded-full animate-pulse"></div>
         <div class="absolute bottom-10 right-10 w-16 h-16 bg-secondary rounded-full animate-pulse"
@@ -602,29 +606,28 @@
           style="animation-delay: 2s"></div>
       </div>
 
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-        <div data-aos="zoom-in" class="aos-init">
+      <div class="max-w-4xl flex items-center justify-center mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+        <div data-aos="zoom-in" class="aos-init flex items-center justify-center flex-column">
           <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">
             Готовы отправиться в незабываемое приключение?
           </h2>
           <p class="text-xl text-gray-700 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Получите полный гайд и начните планировать свою поездку уже сегодня. Все необходимые знания и подсказки в
-            одном месте.
+            Получите полный гид и начните планировать свою поездку уже сегодня.
           </p>
 
-          <div class="bg-white p-8 rounded-3xl shadow-xl max-w-md mx-auto mb-8">
+          <div class="bg-white p-8 rounded-3xl shadow-xl max-w-md mx-auto mb-8 flex items-center justify-center flex-column">
             <div
               class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4">
               <i class="ri-telegram-fill ri-2x text-white"></i>
             </div>
             <h3 class="text-2xl font-bold mb-4">Получить эксклюзивный доступ</h3>
             <p class="text-gray-600 mb-6">
-              Получите гайд и задайте все интересующие вопросы напрямую
+              Готовые маршруты и подсказки в одном месте.
             </p>
             <a href="https://t.me/tribute/app?startapp=ep_8x7GhIMJPIx0Co0lsaYpu1i1O4o5MPEcEtn2bfEuqGokCHeBWk"
               class="w-full inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-semibold !rounded-button hover:shadow-lg transform hover:scale-105 transition-all duration-300 whitespace-nowrap">
               <i class="ri-telegram-line ri-lg mr-3"></i>
-              Получить эксклюзивный доступ
+              Начинаем путешествие
             </a>
           </div>
 
@@ -636,7 +639,7 @@
       </div>
     </section>
 
-    <section class="py-16 bg-white">
+    <section class="py-16 bg-white flex items-center justify-center">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12 aos-init" data-aos="fade-up">
           <h2 class="text-3xl font-bold mb-4">
@@ -770,10 +773,10 @@
     </section>
   </main>
 
-  <footer class="bg-gray-900 text-white py-12">
+  <footer class="bg-gray-900 text-white py-12 flex items-center justify-center">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-4 gap-8">
-        <div class="md:col-span-2">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="md:col-span-1">
           <div class="flex items-center space-x-3 mb-4">
             <div
               class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center overflow-hidden">
@@ -786,7 +789,11 @@
           <p class="text-gray-400 mb-6 max-w-md">
             Планируйте без стресса, путешествуйте с умом и открывайте Японию вместе со мной! Делюсь личным опытом и проверенной информацией.
           </p>
-          <div class="flex space-x-4">
+          
+        </div>
+
+        <div>
+          <div class="flex space-x-4 justify-center">
             <a href="https://www.youtube.com/@hollylolly" target="_blank"
               class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors">
               <i class="ri-youtube-line"></i>
@@ -800,9 +807,6 @@
               <i class="ri-telegram-line"></i>
             </a>
           </div>
-        </div>
-
-        <div>
           <!-- <h4 class="font-semibold mb-4">Полезные ссылки</h4>
           <ul class="space-y-2 text-gray-400">
             <li>
