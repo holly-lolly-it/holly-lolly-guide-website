@@ -31,7 +31,7 @@
 			rgba(244, 164, 96, 0.1)
 		),
 		url("assets/background.jpg");
-	background-size: auto;
+	background-size: cover;
 	background-position: center;
 }
 
@@ -39,6 +39,14 @@
 	#preview {
 		flex-direction: column;
 	}
+
+    #hero-section {
+	background-image: linear-gradient(
+			rgba(233, 116, 68, 0.1),
+			rgba(244, 164, 96, 0.1)
+		),
+		url("assets/background-small.jpg");
+}
 
 	#header-icons {
 		display: none;
