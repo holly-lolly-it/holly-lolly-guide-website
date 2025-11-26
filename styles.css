@@ -1,28 +1,46 @@
 :root {
-    --primary-color: #F0738A;
-    --primary-color-light: rgba(240, 115, 138, 0.1);
-    --secondary-color: #f08195;
-    --secondary-color-light: rgba(240, 129, 149, 0.1);
+	--primary-color: #f0738a;
+	--primary-color-light: rgba(240, 115, 138, 0.1);
+	--secondary-color: #f08195;
+	--secondary-color-light: rgba(240, 129, 149, 0.1);
 }
 
 #header-logo {
-    min-width: 50px;
+	min-width: 50px;
 }
 
 .m-h-5 {
-    min-height: 30px;
+	min-height: 30px;
 }
 
 .m-w-5 {
-    min-width: 30px;
+	min-width: 30px;
 }
 
 .contain {
-    object-fit: contain;
+	object-fit: contain;
+}
+
+.faq-trigger {
+	max-width: 100%;
+}
+
+#hero-section {
+	background-image: linear-gradient(
+			rgba(233, 116, 68, 0.1),
+			rgba(244, 164, 96, 0.1)
+		),
+		url("assets/background.jpg");
+	background-size: auto;
+	background-position: center;
 }
 
 @media (max-width: 660px) {
-    #preview {
-        flex-direction: column;
-    }
+	#preview {
+		flex-direction: column;
+	}
+
+	#header-icons {
+		display: none;
+	}
 }
