@@ -5,33 +5,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>
-    HollyLolly | Гайд по переезду в Японию 2025 - Полное руководство для
-    эмигрантов
+    Гид по Японии от HollyLolly
   </title>
   <meta name="description"
-    content="Полный гайд по переезду в Японию от HollyLolly. Пошаговая инструкция по визам, работе, жилью и адаптации в Японии. Проверенная информация от эксперта." />
+    content="Гид по Японии от HollyLolly. Пошаговая инструкция для туристов и людей, которые хотят знать о Японию, посетить Японию, путешествовать по Японии, узнать о Японии от местных жителей. Готовые маршруты, секретные места, неписаные правила и самые потрясающие впечатления!" />
   <meta name="keywords"
-    content="переезд в Японию, виза в Японию, работа в Японии, жизнь в Японии, эмиграция, гайд по Японии, HollyLolly" />
+    content="Япония, Японское, Токио, Киото, Осака, путешествия, гид, карта, турист, тур, поездка, туризм, экскурсии, жизнь в Японии, гайд по Японии, HollyLolly" />
   <meta name="author" content="HollyLolly" />
-  <meta property="og:title" content="HollyLolly | Гайд по переезду в Японию 2025" />
+  <meta property="og:title" content="Гид по Японии от HollyLolly" />
   <meta property="og:description"
-    content="Полное руководство по переезду в Японию от эксперта. Визы, работа, жилье, адаптация - все что нужно знать для успешного переезда." />
+    content="Готовые маршруты, секретные места, неписаные правила и самые потрясающие впечатления!" />
   <meta property="og:type" content="website" />
-  <!-- <meta property="og:image" content="" /> -->
-  <!-- <link rel="canonical" href="https://example.com" /> -->
+  <meta property="og:image" content="https://hollylolly-guide.com/assets/favicons/favicon.svg" />
+  <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/favicons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="HollyLollyGuide" />
+  <meta name="theme-color" content="#f0637d">
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="canonical" href="https://hollylolly-guide.com/en" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <meta name="robots" content="index, follow">
   <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "HollyLolly",
-        "jobTitle": "Эксперт по переезду в Японию",
-        "description": "YouTube блогер и эксперт по эмиграции в Японию",
-        "url": "",
+        "jobTitle": "Эксперт по путешествию в Японию",
+        "description": "YouTube блогер и эксперт по путешествию в Японию",
+        "url": "https://hollylolly-guide.com",
         "sameAs": [
           "https://www.youtube.com/@hollylolly",
           "https://www.youtube.com/@hollylolly",
@@ -39,8 +43,10 @@
         ]
       }
     </script>
-    <link rel="stylesheet" href="tailwind.css">
-  <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/assets/icons/remixicon.css">
+    <link rel="stylesheet" href="/assets/css/aos.css">
+    <link rel="stylesheet" href="/assets/css/tailwind.css">
+  <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 
 <body id="start" class="bg-white text-gray-900 overflow-x-hidden" data-aos-easing="ease-in-out" data-aos-duration="800"
@@ -51,7 +57,7 @@
         <div class="flex items-center space-x-4">
           <a href="#start" id="header-logo"
             class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center overflow-hidden">
-            <img src="assets/logo.png" alt="Logo of the YouTube channel HollyLolly">
+            <img src="/assets/favicons/favicon-96x96.png" alt="Logo of the YouTube channel HollyLolly">
           </a>
           <div>
             <h1 class="text-xl font-bold text-primary">Гид по Японии от HollyLolly</h1>
@@ -60,20 +66,37 @@
           </div>
         </div>
         <div id="header-icons" class="flex items-center space-x-4">
-          <a href="https://www.youtube.com/@hollylolly" target="_blank"
-            class="w-10 h-10 flex items-center justify-center text-gray-600 hover:text-primary transition-colors">
+          <div class="relative">
+            <button id="language-switcher"
+              class="flex items-center space-x-2 px-3 py-2 text-gray-600 hover:text-primary transition-colors rounded-lg hover:bg-gray-50">
+              <i class="ri-global-line"></i>
+              <span class="text-sm font-medium">RU</span>
+              <i class="ri-arrow-down-s-line text-sm"></i>
+            </button>
+            <div id="language-dropdown"
+              class="absolute right-0 top-full mt-2 bg-white rounded-lg shadow-lg border border-gray-200 min-w-[100px] z-50 hidden">
+              <a href="#" class="flex items-center px-4 py-2 p-4 text-sm text-gray-700 hover:bg-gray-50 rounded-t-lg" data-lang="ru">
+                Русский
+              </a>
+              <a href="#" class="flex items-center px-4 py-2 p-4 pt-0 text-sm text-gray-700 hover:bg-gray-50 rounded-b-lg" data-lang="en">
+                English
+              </a>
+            </div>
+          </div>
+          <a href="https://www.youtube.com/@hollylolly" target="_blank" aria-label="youtube link" rel="noopener noreferrer"
+            class="w-10 h-10 flex items-center justify-center text-gray-600 hover:text-primary transition-colors hide-small">
             <i class="ri-youtube-line ri-lg"></i>
           </a>
-          <a href="https://instagram.com/holly_lolly_r" target="_blank"
-            class="w-10 h-10 flex items-center justify-center text-gray-600 hover:text-primary transition-colors">
+          <a href="https://instagram.com/holly_lolly_r" target="_blank" aria-label="instagram link" rel="noopener noreferrer"
+            class="w-10 h-10 flex items-center justify-center text-gray-600 hover:text-primary transition-colors hide-small">
             <i class="ri-instagram-line ri-lg"></i>
           </a>
-          <a href="#telegram"
-            class="w-10 h-10 flex items-center justify-center text-gray-600 hover:text-primary transition-colors">
+          <a href="#telegram" aria-label="telegram link"
+            class="w-10 h-10 flex items-center justify-center text-gray-600 hover:text-primary transition-colors hide-small">
             <i class="ri-telegram-line ri-lg"></i>
           </a>
-          <a href="https://tiktok.com/@holly.lolly_1" target="_blank"
-            class="w-10 h-10 flex items-center justify-center text-gray-600 hover:text-primary transition-colors">
+          <a href="https://tiktok.com/@holly.lolly_1" target="_blank" aria-label="tiktok link" rel="noopener noreferrer"
+            class="w-10 h-10 flex items-center justify-center text-gray-600 hover:text-primary transition-colors hide-small">
             <i class="ri-tiktok-line ri-lg"></i>
           </a>
         </div>
@@ -135,26 +158,6 @@
               удобные маршруты, практичные советы, нюансы культуры и маленькие секреты, которые делают путешествие
               по-настоящему живым и лёгким.
             </p>
-            <!-- <div class="space-y-4 mb-8">
-              <div class="flex items-center space-x-3">
-                <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
-                  <i class="ri-check-line text-green-600 text-sm"></i>
-                </div>
-                <span class="text-gray-700">Более 190.000 тисяч подписчиков на YouTube</span>
-              </div>
-              <div class="flex items-center space-x-3">
-                <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
-                  <i class="ri-check-line text-green-600 text-sm"></i>
-                </div>
-                <span class="text-gray-700">Помогла переехать 200+ людям</span>
-              </div>
-              <div class="flex items-center space-x-3">
-                <div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
-                  <i class="ri-check-line text-green-600 text-sm"></i>
-                </div>
-                <span class="text-gray-700">Личный опыт всех видов виз</span>
-              </div>
-            </div> -->
             <p class="text-lg text-gray-700 mb-6">
               Если вы хотите увидеть Японию без хаоса и разочарований, почувствовать её ритм и наслаждаться поездкой без
               лишних поисков — этот гид создан именно для вас. Он сэкономит часы подготовки и подарит уверенность на
@@ -166,7 +169,7 @@
           </div>
           <div class="relative aos-init max-h-7xl h-xl flex justify-center" data-aos="fade-left">
             <div class="absolute -inset-4 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl blur-2xl"></div>
-            <img src="assets/say_hi.jpg" alt="Оля в Японии"
+            <img src="/assets/images/say_hi.avif" alt="Оля в Японии" loading="lazy"
               class="relative rounded-3xl object-contain object-top h-96 shadow-2xl max-h-full">
           </div>
         </div>
@@ -179,10 +182,6 @@
           <h2 class="text-4xl font-bold mb-6 gradient-text">
             Что включает гид
           </h2>
-          <!-- <p class="text-xl text-gray-600 max-w-3xl">
-            Полное руководство с пошаговыми инструкциями для успешного
-            переезда в Японию
-          </p> -->
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -346,66 +345,14 @@
           </div>
 
           <div class="grid grid-cols-2 gap-4 aos-init" data-aos="fade-left">
-            <img src="assets/contact.png" alt="HollyLolly создает контент"
+            <img src="/assets/images/contact.avif" alt="HollyLolly создает контент" loading="lazy" id="create-content"
               class="rounded-2xl object-cover object-top h-80" />
-            <img src="assets/japan-street.png" alt="Жизнь в Японии"
+            <img src="/assets/images/japan-street.avif" alt="Жизнь в Японии" loading="lazy"
               class="rounded-2xl object-cover object-top h-80 mt-8" />
           </div>
         </div>
       </div>
     </section>
-
-    <!-- <section class="py-20 bg-gray-50">
-      <div class="max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16 aos-init" data-aos="fade-up">
-          <h2 class="text-4xl font-bold mb-6 gradient-text">Превью гайда</h2>
-          <p class="text-xl text-gray-600 max-w-3xl">
-            Посмотрите, как выглядит гайд изнутри — структурированная информация с примерами и чек-листами
-          </p>
-        </div>
-        <div class="relative max-w-4xl aos-init" data-aos="zoom-in">
-          <div id="preview" class="flex justify-center items-center space-x-4">
-            <div class="transform -rotate-12 z-10">
-              <img
-                src="assets/background.jpg"
-                alt="Страница о визах" class="rounded-2xl shadow-2xl object-cover object-top w-64 h-80">
-            </div>
-            <div class="transform rotate-6 z-20">
-              <img
-                src="assets/background.jpg"
-                alt="Бюджет переезда" class="rounded-2xl shadow-2xl object-cover object-top w-64 h-80">
-            </div>
-            <div class="transform -rotate-6 z-30">
-              <img
-                src="assets/background.jpg"
-                alt="Чек-лист переезда" class="rounded-2xl shadow-2xl object-cover object-top w-64 h-80">
-            </div>
-            <div class="transform rotate-12 z-10">
-              <img
-                src="assets/background.jpg"
-                alt="Поиск работы" class="rounded-2xl shadow-2xl object-cover object-top w-64 h-80">
-            </div>
-          </div>
-          <div class="text-center mt-12">
-            <div class="bg-white p-6 rounded-2xl shadow-lg max-w-md">
-              <h3 class="text-xl font-bold mb-3">120+ страниц полезной информации</h3>
-              <p class="text-gray-600 mb-4">Структурированные разделы, чек-листы, примеры документов и пошаговые
-                инструкции</p>
-              <div class="flex items-center justify-center space-x-6 text-sm text-gray-500">
-                <div class="flex items-center">
-                  <i class="ri-file-text-line mr-2"></i>
-                  PDF формат
-                </div>
-                <div class="flex items-center">
-                  <i class="ri-smartphone-line mr-2"></i>
-                  Для всех устройств
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
 
     <section class="py-20 bg-gray-50 flex items-center justify-center max-w-full">
       <div class="max-w-4xl px-4 sm:px-6 lg:px-8" style="width: min(56rem, 100%);">
@@ -642,7 +589,7 @@
         <div class="grid md:grid-cols-3 gap-8">
           <div class="bg-gray-50 p-6 rounded-2xl aos-init" data-aos="fade-up" data-aos-delay="100">
             <div class="flex items-center mb-4">
-              <img src="assets/person.jpg" alt="Алина Жук"
+              <img src="/assets/images/person.jpg" alt="Алина Жук" loading="lazy"
                 class="w-12 h-12 rounded-full object-cover object-top mr-4" />
               <div>
                 <h3 class="font-semibold">Алина Жук</h3>
@@ -662,7 +609,7 @@
 
           <div class="bg-gray-50 p-6 rounded-2xl aos-init" data-aos="fade-up" data-aos-delay="200">
             <div class="flex items-center mb-4">
-              <img src="assets/person.jpg" alt="Александр Демидов"
+              <img src="/assets/images/person.jpg" alt="Александр Демидов" loading="lazy"
                 class="w-12 h-12 rounded-full object-cover object-top mr-4" />
               <div>
                 <h3 class="font-semibold">Александр Демидов</h3>
@@ -682,7 +629,7 @@
 
           <div class="bg-gray-50 p-6 rounded-2xl aos-init" data-aos="fade-up" data-aos-delay="300">
             <div class="flex items-center mb-4">
-              <img src="assets/person.jpg" alt="Наталья Литкова"
+              <img src="/assets/images/person.jpg" alt="Наталья Литкова" loading="lazy"
                 class="w-12 h-12 rounded-full object-cover object-top mr-4" />
               <div>
                 <h3 class="font-semibold">Наталья Литкова</h3>
@@ -702,7 +649,7 @@
 
           <div class="bg-gray-50 p-6 rounded-2xl aos-init" data-aos="fade-up" data-aos-delay="300">
             <div class="flex items-center mb-4">
-              <img src="assets/person.jpg" alt="София Корнеева"
+              <img src="/assets/images/person.jpg" alt="София Корнеева" loading="lazy"
                 class="w-12 h-12 rounded-full object-cover object-top mr-4" />
               <div>
                 <h3 class="font-semibold">София Корнеева</h3>
@@ -722,7 +669,7 @@
 
           <div class="bg-gray-50 p-6 rounded-2xl aos-init" data-aos="fade-up" data-aos-delay="300">
             <div class="flex items-center mb-4">
-              <img src="assets/person.jpg" alt="Анна Король"
+              <img src="/assets/images/person.jpg" alt="Анна Король" loading="lazy"
                 class="w-12 h-12 rounded-full object-cover object-top mr-4" />
               <div>
                 <h3 class="font-semibold">Анна Король</h3>
@@ -742,7 +689,7 @@
 
           <div class="bg-gray-50 p-6 rounded-2xl aos-init" data-aos="fade-up" data-aos-delay="300">
             <div class="flex items-center mb-4">
-              <img src="assets/person.jpg" alt="Анна Король"
+              <img src="/assets/images/person.jpg" alt="Анна Король" loading="lazy"
                 class="w-12 h-12 rounded-full object-cover object-top mr-4" />
               <div>
                 <h3 class="font-semibold">Николай Береза</h3>
@@ -771,7 +718,7 @@
           <div class="flex items-center space-x-3 mb-4">
             <div
               class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center overflow-hidden">
-              <img src="assets/logo.png" alt="Logo of the YouTube channel HollyLolly">
+              <img src="/assets/favicons/favicon-96x96.png" alt="Logo of the YouTube channel HollyLolly" loading="lazy">
             </div>
             <div>
               <h3 class="text-xl font-bold text-primary">HollyLolly</h3>
@@ -785,46 +732,23 @@
 
         <div>
           <div class="flex space-x-4 justify-center">
-            <a href="https://www.youtube.com/@hollylolly" target="_blank"
+            <a href="https://www.youtube.com/@hollylolly" target="_blank" aria-label="youtube link" rel="noopener noreferrer"
               class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors">
               <i class="ri-youtube-line"></i>
             </a>
-            <a href="https://instagram.com/holly_lolly_r" target="_blank"
+            <a href="https://instagram.com/holly_lolly_r" target="_blank" aria-label="instagram link" rel="noopener noreferrer"
               class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors">
               <i class="ri-instagram-line"></i>
             </a>
-            <a href="#telegram"
+            <a href="#telegram" aria-label="telegram link"
               class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors">
               <i class="ri-telegram-line"></i>
             </a>
-            <a href="https://tiktok.com/@holly.lolly_1" target="_blank"
+            <a href="https://tiktok.com/@holly.lolly_1" target="_blank" aria-label="tiktok link" rel="noopener noreferrer"
               class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors">
               <i class="ri-tiktok-line"></i>
             </a>
           </div>
-          <!-- <h4 class="font-semibold mb-4">Полезные ссылки</h4>
-          <ul class="space-y-2 text-gray-400">
-            <li>
-              <a href="https://www.youtube.com/@hollylolly" target="_blank"
-                class="hover:text-white transition-colors"></a>
-              О канале
-              </a>
-            </li>
-            <li>
-              <a href="https://www.youtube.com/@hollylolly" target="_blank" class="hover:text-white transition-colors">
-                Видео о Японии
-              </a>
-            </li>
-            <li>
-              <a href="https://www.youtube.com/@hollylolly" target="_blank"
-                class="hover:text-white transition-colors">Блог</a>
-            </li>
-            <li>
-              <a href="#" class="hover:text-white transition-colors">
-                Контакты
-              </a>
-            </li>
-          </ul> -->
         </div>
 
         <div>
@@ -844,7 +768,7 @@
     </div>
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="/assets/js/aos.js"></script>
 
   <script id="aos-init">
     document.addEventListener("DOMContentLoaded", function () {
@@ -878,6 +802,44 @@
             icon.style.transform = 'rotate(45deg)';
           }
         });
+      });
+    });
+  </script>
+
+  <script id="language-switcher">
+    document.addEventListener('DOMContentLoaded', function () {
+      const languageSwitcher = document.getElementById('language-switcher');
+      const languageDropdown = document.getElementById('language-dropdown');
+      const languageLinks = document.querySelectorAll('[data-lang]');
+      const currentLangSpan = languageSwitcher.querySelector('span');
+
+      languageSwitcher.addEventListener('click', function (e) {
+        e.stopPropagation();
+        languageDropdown.classList.toggle('hidden');
+      });
+
+      languageLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          const selectedLang = this.getAttribute('data-lang');
+          const langText = selectedLang.toUpperCase();
+
+          languageDropdown.classList.add('hidden');
+          if (currentLangSpan.textContent != langText) {
+            if (langText == 'RU')
+              window.location.href = "/";
+            else
+              window.location.href = "/en";
+          }
+        });
+      });
+
+      document.addEventListener('click', function () {
+        languageDropdown.classList.add('hidden');
+      });
+
+      languageDropdown.addEventListener('click', function (e) {
+        e.stopPropagation();
       });
     });
   </script>
