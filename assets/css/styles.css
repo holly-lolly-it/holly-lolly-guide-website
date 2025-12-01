@@ -16,6 +16,9 @@
 .m-w-5 {
 	min-width: 30px;
 }
+.mx-w-5 {
+	max-width: 30px;
+}
 
 .contain {
 	object-fit: contain;
@@ -56,4 +59,8 @@
 	.parallax-bg {
 		background-attachment: scroll;
 	}
+}
+
+html, body {
+	overflow-x: hidden;
 }
