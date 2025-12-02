@@ -61,6 +61,18 @@
 	}
 }
 
+@supports (-webkit-touch-callout: none) and (not (translate: none)) {
+    .parallax-bg {
+		background-attachment: scroll;
+	}
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .parallax-bg {
+		background-attachment: scroll;
+	}
+}
+
 html, body {
 	overflow-x: hidden;
 }
