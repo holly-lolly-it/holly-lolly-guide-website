@@ -76,3 +76,9 @@
 html, body {
 	overflow-x: hidden;
 }
+
+@media (max-width: 415px) {
+	#telegram-navigate-button {
+		text-wrap: auto;
+	}
+}
