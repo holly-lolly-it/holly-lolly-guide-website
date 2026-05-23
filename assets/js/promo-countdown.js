@@ -107,38 +107,25 @@
       var sentinel = fan.nextElementSibling;
       if (!sentinel || !sentinel.classList.contains('hero-discount-fan-sentinel')) return;
 
-      // Sticky: show fixed fan when hero section leaves viewport.
-      var heroSection = document.getElementById('hero-section');
-      if (heroSection) {
-        var stickyObserver = new IntersectionObserver(
-          function (entries) {
-            entries.forEach(function (entry) {
-              if (entry.isIntersecting) {
-                fan.classList.remove('hero-discount-fan--sticky');
-              } else {
-                fan.classList.add('hero-discount-fan--sticky');
-              }
-            });
-          },
-          { root: null, rootMargin: '0px', threshold: 0 }
-        );
-        stickyObserver.observe(heroSection);
-      }
-
-      // Hide: slide the fan out when the telegram CTA section comes into view.
+      // Fan is always position:fixed — no sticky observer needed.
+      // Hide: slide the fan out once the telegram section comes into view,
+      // and keep it hidden even when the user scrolls further past it.
       var telegramSection = document.getElementById('telegram');
       if (telegramSection) {
         var hideObserver = new IntersectionObserver(
           function (entries) {
             entries.forEach(function (entry) {
-              if (entry.isIntersecting) {
+              var rect = entry.boundingClientRect;
+              if (entry.isIntersecting || rect.bottom < 0) {
+                // Telegram is visible OR has already scrolled above the viewport.
                 fan.classList.add('hero-discount-fan--hidden');
-              } else {
+              } else if (rect.top > 0) {
+                // Telegram is still below the viewport — user hasn't reached it yet.
                 fan.classList.remove('hero-discount-fan--hidden');
               }
             });
           },
-          { root: null, rootMargin: '0px', threshold: 0.05 }
+          { root: null, rootMargin: '0px', threshold: 0 }
         );
         hideObserver.observe(telegramSection);
       }

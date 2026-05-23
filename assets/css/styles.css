@@ -28,6 +28,8 @@
 	max-width: 100%;
 }
 
+/* .promo-discount { display: none !important; } */
+
 #hero-section {
 	background-image: linear-gradient(
 			rgba(233, 116, 68, 0.1),
@@ -239,16 +241,17 @@ html, body {
 	50%      { transform: rotate(-12deg) translateY(-4px); }
 }
 
+/* Fan is always fixed on desktop — no absolute→fixed jump on scroll */
 .hero-discount-fan {
-	position: absolute;
-	top: clamp(4rem, 12vh, 7rem);
-	left: clamp(0.5rem, 4vw, 2rem);
-	z-index: 20;
+	position: fixed;
+	top: clamp(4.5rem, 10vh, 6.5rem);
+	left: clamp(0.5rem, 3vw, 1.5rem);
+	z-index: 40;
 	display: block;
 	cursor: pointer;
 	text-decoration: none;
 	animation: fan-float 4s ease-in-out infinite;
-	transition: width 0.35s ease, top 0.35s ease, bottom 0.35s ease, left 0.35s ease, scale 0.25s ease, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.45s ease;
+	transition: scale 0.25s ease, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.45s ease;
 }
 
 .hero-discount-fan:hover,
@@ -264,10 +267,10 @@ html, body {
 
 .hero-discount-fan img {
 	display: block;
-	width: 170px;
+	width: 155px;
 	height: auto;
 	filter: drop-shadow(0 8px 20px rgba(240, 99, 125, 0.4));
-	transition: width 0.35s ease, height 0.35s ease, filter 0.25s ease;
+	transition: filter 0.25s ease;
 }
 
 .hero-discount-fan:hover img,
@@ -275,11 +278,10 @@ html, body {
 	filter: drop-shadow(0 12px 28px rgba(240, 99, 125, 0.6));
 }
 
+/* --sticky class no longer changes position (already fixed); kept for potential future use */
 .hero-discount-fan.hero-discount-fan--sticky {
-	position: fixed;
-	top: clamp(5rem, 11vh, 6.5rem);
-	left: clamp(0.5rem, 3vw, 1.25rem);
-	z-index: 40;
+	top: clamp(4.5rem, 10vh, 6.5rem);
+	left: clamp(0.5rem, 3vw, 1.5rem);
 }
 
 .hero-discount-fan.hero-discount-fan--hidden {
@@ -289,37 +291,18 @@ html, body {
 	animation-play-state: paused;
 }
 
-@media (max-width: 640px) {
-	.hero-discount-fan.hero-discount-fan--hidden {
-		transform: translateX(calc(-100% - 1rem)) rotate(0deg);
-	}
-}
-
-.hero-discount-fan.hero-discount-fan--sticky img {
-	width: 115px;
-	filter: drop-shadow(0 6px 16px rgba(240, 99, 125, 0.35));
-}
-
+/* Sentinel no longer needed for sticky logic but kept in DOM for JS compat */
 .hero-discount-fan-sentinel {
-	position: absolute;
-	top: clamp(4rem, 12vh, 7rem);
-	left: clamp(0.5rem, 4vw, 2rem);
-	width: 1px;
-	height: 170px;
-	pointer-events: none;
-	visibility: hidden;
+	display: none;
 }
 
 @media (max-width: 640px) {
 	.hero-discount-fan {
-		position: fixed;
 		top: auto;
 		bottom: max(1rem, env(safe-area-inset-bottom, 0px));
 		left: 0.5rem;
-		z-index: 40;
 	}
 
-	.hero-discount-fan,
 	.hero-discount-fan.hero-discount-fan--sticky {
 		top: auto;
 		bottom: max(1rem, env(safe-area-inset-bottom, 0px));
@@ -329,6 +312,10 @@ html, body {
 	.hero-discount-fan img,
 	.hero-discount-fan.hero-discount-fan--sticky img {
 		width: 130px;
+	}
+
+	.hero-discount-fan.hero-discount-fan--hidden {
+		transform: translateX(calc(-100% - 1rem)) rotate(0deg);
 	}
 
 	.hero-discount-fan-sentinel {
