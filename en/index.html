@@ -135,6 +135,10 @@
 
   <main>
     <section id="hero-section" class="relative min-h-screen flex items-center justify-center parallax-bg max-w-full">
+      <a href="#telegram" class="hero-discount-fan" data-fan-sticky aria-label="77% discount — go to checkout">
+        <img src="/assets/images/discount-fan.svg" alt="" width="140" height="140" loading="eager" />
+      </a>
+      <div class="hero-discount-fan-sentinel" aria-hidden="true"></div>
       <div class="relative max-w-7xl sm:px-6 lg:px-8 py-20 max-w-full">
         <div class="max-w-3xl">
           <div
@@ -166,6 +170,39 @@
               <i class="ri-telegram-line ri-lg mr-3"></i>
               Get Exclusive Access
             </a>
+
+            <div class="countdown-sticky-host w-full aos-init" style="margin-top: 15px;" data-aos="fade-up" data-aos-delay="200">
+              <div class="countdown-wrapper" data-countdown data-countdown-sticky role="timer" aria-live="polite" aria-label="Time left until the offer ends">
+                <span class="countdown-sakura countdown-sakura-left" aria-hidden="true">🌸</span>
+                <span class="countdown-sakura countdown-sakura-right" aria-hidden="true">🌸</span>
+                <div class="countdown-header">
+                  <span class="dot" aria-hidden="true"></span>
+                  <span data-countdown-message>77% discount only until 1 June</span>
+                </div>
+                <div class="countdown-row">
+                  <div class="countdown-box">
+                    <div class="countdown-number" data-unit="days">00</div>
+                    <div class="countdown-label">Days</div>
+                  </div>
+                  <span class="countdown-separator" aria-hidden="true">:</span>
+                  <div class="countdown-box">
+                    <div class="countdown-number" data-unit="hours">00</div>
+                    <div class="countdown-label">Hours</div>
+                  </div>
+                  <span class="countdown-separator" aria-hidden="true">:</span>
+                  <div class="countdown-box">
+                    <div class="countdown-number" data-unit="minutes">00</div>
+                    <div class="countdown-label">Min</div>
+                  </div>
+                  <span class="countdown-separator" aria-hidden="true">:</span>
+                  <div class="countdown-box">
+                    <div class="countdown-number" data-unit="seconds">00</div>
+                    <div class="countdown-label">Sec</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="countdown-sticky-sentinel" aria-hidden="true"></div>
           </div>
     
         </div>
@@ -580,6 +617,13 @@
               <i class="ri-telegram-line ri-lg mr-3"></i>
               Let&rsquo;s make this trip unforgettable
             </a>
+
+            <div class="discount-urgency">
+              <img src="/assets/images/discount-fan.svg" alt="" class="discount-urgency-icon" width="56" height="56" />
+              <p class="discount-urgency-text">
+                <strong>77% off ends soon</strong> — grab the guide before 1 June.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -813,6 +857,8 @@
       });
     });
   </script>
+
+  <script src="/assets/js/promo-countdown.js" defer></script>
 
   <script id="language-switcher">
     document.addEventListener('DOMContentLoaded', function () {

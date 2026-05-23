@@ -136,6 +136,10 @@
 
   <main>
     <section id="hero-section" class="relative min-h-screen flex items-center justify-center parallax-bg max-w-full">
+      <a href="#telegram" class="hero-discount-fan" data-fan-sticky aria-label="Скидка 77% — перейти к оформлению">
+        <img src="/assets/images/discount-fan-ru.svg" alt="" width="140" height="140" loading="eager" />
+      </a>
+      <div class="hero-discount-fan-sentinel" aria-hidden="true"></div>
       <div class="relative max-w-7xl sm:px-6 lg:px-8 py-20 max-w-full">
         <div class="max-w-3xl">
           <div
@@ -161,24 +165,46 @@
                 <span class="text-gray-600 font-medium">66 отзывов</span>
               </div>
             </div>
-            <div class="countdown-mini mb-5 aos-init" data-countdown data-aos="fade-up" data-aos-delay="500" role="timer" aria-label="Время до конца акции">
-              <span class="mini-tag">
-                <span class="dot" aria-hidden="true"></span>
-                −33% Старт-бонус
-              </span>
-              <span class="mini-timer">
-                <span data-unit="days">00</span><span class="text-gray-400">д</span>
-                <span data-unit="hours">00</span><span class="text-gray-400">ч</span>
-                <span data-unit="minutes">00</span><span class="text-gray-400">м</span>
-                <span data-unit="seconds">00</span><span class="text-gray-400">с</span>
-              </span>
-            </div>
+            
             <a href="#telegram" id="telegram-navigate-button"
               class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-semibold !rounded-button hover:shadow-lg transform hover:scale-105 transition-all duration-300 whitespace-nowrap aos-init"
               data-aos="fade-up" data-aos-delay="600">
               <i class="ri-telegram-line ri-lg mr-3"></i>
               Получить эксклюзивный доступ
             </a>
+
+            <div class="countdown-sticky-host w-full aos-init" style="margin-top: 15px;" data-aos="fade-up" data-aos-delay="200">
+              <div class="countdown-wrapper" data-countdown data-countdown-sticky role="timer" aria-live="polite" aria-label="Время до конца акции">
+                <span class="countdown-sakura countdown-sakura-left" aria-hidden="true">🌸</span>
+                <span class="countdown-sakura countdown-sakura-right" aria-hidden="true">🌸</span>
+                <div class="countdown-header">
+                  <span class="dot" aria-hidden="true"></span>
+                  <span data-countdown-message>Скидка 77% только до 1 июня</span>
+                </div>
+                <div class="countdown-row">
+                  <div class="countdown-box">
+                    <div class="countdown-number" data-unit="days">00</div>
+                    <div class="countdown-label">Дней</div>
+                  </div>
+                  <span class="countdown-separator" aria-hidden="true">:</span>
+                  <div class="countdown-box">
+                    <div class="countdown-number" data-unit="hours">00</div>
+                    <div class="countdown-label">Часов</div>
+                  </div>
+                  <span class="countdown-separator" aria-hidden="true">:</span>
+                  <div class="countdown-box">
+                    <div class="countdown-number" data-unit="minutes">00</div>
+                    <div class="countdown-label">Мин</div>
+                  </div>
+                  <span class="countdown-separator" aria-hidden="true">:</span>
+                  <div class="countdown-box">
+                    <div class="countdown-number" data-unit="seconds">00</div>
+                    <div class="countdown-label">Сек</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="countdown-sticky-sentinel" aria-hidden="true"></div>
           </div>
     
         </div>
@@ -610,34 +636,12 @@
               Начинаем путешествие
             </a>
 
-            <div class="countdown-wrapper mt-5" data-countdown role="timer" aria-label="Время до конца акции">
-              <span class="countdown-sakura countdown-sakura-left" aria-hidden="true">🌸</span>
-              <span class="countdown-sakura countdown-sakura-right" aria-hidden="true">🌸</span>
-              <div class="countdown-header">
-                <span class="dot" aria-hidden="true"></span>
-                <span>−50% &middot; Только ограниченное время!</span>
-              </div>
-              <div class="countdown-row">
-                <div class="countdown-box">
-                  <div class="countdown-number" data-unit="days">00</div>
-                  <div class="countdown-label">Дней</div>
-                </div>
-                <span class="countdown-separator" aria-hidden="true">:</span>
-                <div class="countdown-box">
-                  <div class="countdown-number" data-unit="hours">00</div>
-                  <div class="countdown-label">Часов</div>
-                </div>
-                <span class="countdown-separator" aria-hidden="true">:</span>
-                <div class="countdown-box">
-                  <div class="countdown-number" data-unit="minutes">00</div>
-                  <div class="countdown-label">Мин</div>
-                </div>
-                <span class="countdown-separator" aria-hidden="true">:</span>
-                <div class="countdown-box">
-                  <div class="countdown-number" data-unit="seconds">00</div>
-                  <div class="countdown-label">Сек</div>
-                </div>
-              </div>
+            <div class="discount-urgency">
+              <img src="/assets/images/discount-fan-ru.svg" alt="" class="discount-urgency-icon" width="56" height="56" />
+              <p class="discount-urgency-text">
+                <strong>Скидка 77% скоро закончится</strong> — успейте забрать гид до 1 июня.
+                <!-- <a href="#start" class="discount-urgency-link">Вернуться наверх</a> -->
+              </p>
             </div>
           </div>
         </div>
@@ -873,70 +877,7 @@
     });
   </script>
 
-  <script id="promo-countdown">
-    (function () {
-      var STORAGE_KEY = 'hl_promo_end_v1';
-      var DURATION_MS = 7 * 24 * 60 * 60 * 1000;
-
-      function getEndTime() {
-        try {
-          var stored = localStorage.getItem(STORAGE_KEY);
-          if (stored) {
-            var t = parseInt(stored, 10);
-            if (!isNaN(t) && t > Date.now()) return t;
-          }
-        } catch (e) { /* localStorage may be blocked */ }
-        var newEnd = Date.now() + DURATION_MS;
-        try { localStorage.setItem(STORAGE_KEY, String(newEnd)); } catch (e) {}
-        return newEnd;
-      }
-
-      function pad(n) { return n < 10 ? '0' + n : String(n); }
-
-      function render(wrappers, endTime) {
-        var diff = Math.max(0, endTime - Date.now());
-        var days    = Math.floor(diff / 86400000);
-        var hours   = Math.floor((diff / 3600000) % 24);
-        var minutes = Math.floor((diff / 60000) % 60);
-        var seconds = Math.floor((diff / 1000) % 60);
-        var values = { days: days, hours: hours, minutes: minutes, seconds: seconds };
-
-        wrappers.forEach(function (wrapper) {
-          Object.keys(values).forEach(function (unit) {
-            var els = wrapper.querySelectorAll('[data-unit="' + unit + '"]');
-            var next = pad(values[unit]);
-            els.forEach(function (el) {
-              if (el.textContent !== next) {
-                el.textContent = next;
-                if (el.classList.contains('countdown-number')) {
-                  el.classList.remove('tick');
-                  void el.offsetWidth;
-                  el.classList.add('tick');
-                }
-              }
-            });
-          });
-        });
-
-        return diff > 0;
-      }
-
-      document.addEventListener('DOMContentLoaded', function () {
-        var wrappers = document.querySelectorAll('[data-countdown]');
-        if (!wrappers.length) return;
-
-        var endTime = getEndTime();
-        render(wrappers, endTime);
-
-        setInterval(function () {
-          var stillRunning = render(wrappers, endTime);
-          if (!stillRunning) {
-            endTime = getEndTime();
-          }
-        }, 1000);
-      });
-    })();
-  </script>
+  <script src="/assets/js/promo-countdown.js" defer></script>
 
   <script id="language-switcher">
     document.addEventListener('DOMContentLoaded', function () {

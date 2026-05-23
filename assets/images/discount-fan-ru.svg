@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="&#1057;&#1082;&#1080;&#1076;&#1082;&#1072; 77%">
+  <defs>
+    <linearGradient id="fanBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0637d"/>
+      <stop offset="45%" stop-color="#f08195"/>
+      <stop offset="100%" stop-color="#ffb3c4"/>
+    </linearGradient>
+    <linearGradient id="fanInner" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="fanGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#f0637d" flood-opacity="0.45"/>
+      <feDropShadow dx="2" dy="8" stdDeviation="10" flood-color="#000" flood-opacity="0.12"/>
+    </filter>
+    <filter id="textGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#8c1f33" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+  <g filter="url(#fanGlow)" transform="rotate(-8 100 118)">
+    <path d="M100 18 C58 42 28 78 22 118 C20 132 24 148 36 158 C52 170 76 174 100 174 C124 174 148 170 164 158 C176 148 180 132 178 118 C172 78 142 42 100 18 Z" fill="url(#fanBody)"/>
+    <path d="M100 18 C58 42 28 78 22 118 C20 132 24 148 36 158 C52 170 76 174 100 174 C124 174 148 170 164 158 C176 148 180 132 178 118 C172 78 142 42 100 18 Z" fill="url(#fanInner)"/>
+    <g stroke="#fff" stroke-width="1.2" stroke-linecap="round" opacity="0.4">
+      <line x1="100" y1="28" x2="100" y2="162"/>
+      <line x1="100" y1="32" x2="62" y2="152"/>
+      <line x1="100" y1="32" x2="138" y2="152"/>
+      <line x1="100" y1="36" x2="48" y2="138"/>
+      <line x1="100" y1="36" x2="152" y2="138"/>
+      <line x1="100" y1="42" x2="36" y2="122"/>
+      <line x1="100" y1="42" x2="164" y2="122"/>
+    </g>
+    <ellipse cx="100" cy="168" rx="10" ry="6" fill="#e84d6a"/>
+    <circle cx="100" cy="168" r="3" fill="#fff" opacity="0.7"/>
+  </g>
+  <g filter="url(#textGlow)" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" paint-order="stroke fill" stroke="#8c1f33" stroke-linejoin="round">
+    <text x="100" y="125" text-anchor="middle" fill="#fff" font-size="62" font-weight="900" letter-spacing="-2.5" stroke-width="1.6">77%</text>
+    <text x="100" y="152" text-anchor="middle" fill="#fff" font-size="18" font-weight="800" letter-spacing="3" stroke-width="0.7">&#1057;&#1050;&#1048;&#1044;&#1050;&#1040;</text>
+  </g>
+</svg>

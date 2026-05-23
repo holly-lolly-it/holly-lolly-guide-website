@@ -232,3 +232,274 @@ html, body {
 	.countdown-label   { font-size: 0.5625rem; letter-spacing: 0.5px; }
 	.countdown-box     { padding: 8px 2px 6px; border-radius: 10px; }
 }
+
+/* === Hero discount fan === */
+@keyframes fan-float {
+	0%, 100% { transform: rotate(-12deg) translateY(0); }
+	50%      { transform: rotate(-12deg) translateY(-4px); }
+}
+
+.hero-discount-fan {
+	position: absolute;
+	top: clamp(4rem, 12vh, 7rem);
+	left: clamp(0.5rem, 4vw, 2rem);
+	z-index: 20;
+	display: block;
+	cursor: pointer;
+	text-decoration: none;
+	animation: fan-float 4s ease-in-out infinite;
+	transition: width 0.35s ease, top 0.35s ease, bottom 0.35s ease, left 0.35s ease, scale 0.25s ease, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.45s ease;
+}
+
+.hero-discount-fan:hover,
+.hero-discount-fan:focus-visible {
+	scale: 1.07;
+}
+
+.hero-discount-fan:focus-visible {
+	outline: 3px solid rgba(240, 99, 125, 0.6);
+	outline-offset: 6px;
+	border-radius: 50%;
+}
+
+.hero-discount-fan img {
+	display: block;
+	width: 170px;
+	height: auto;
+	filter: drop-shadow(0 8px 20px rgba(240, 99, 125, 0.4));
+	transition: width 0.35s ease, height 0.35s ease, filter 0.25s ease;
+}
+
+.hero-discount-fan:hover img,
+.hero-discount-fan:focus-visible img {
+	filter: drop-shadow(0 12px 28px rgba(240, 99, 125, 0.6));
+}
+
+.hero-discount-fan.hero-discount-fan--sticky {
+	position: fixed;
+	top: clamp(5rem, 11vh, 6.5rem);
+	left: clamp(0.5rem, 3vw, 1.25rem);
+	z-index: 40;
+}
+
+.hero-discount-fan.hero-discount-fan--hidden {
+	transform: translateX(calc(-100% - 2rem)) rotate(-12deg);
+	opacity: 0;
+	pointer-events: none;
+	animation-play-state: paused;
+}
+
+@media (max-width: 640px) {
+	.hero-discount-fan.hero-discount-fan--hidden {
+		transform: translateX(calc(-100% - 1rem)) rotate(0deg);
+	}
+}
+
+.hero-discount-fan.hero-discount-fan--sticky img {
+	width: 115px;
+	filter: drop-shadow(0 6px 16px rgba(240, 99, 125, 0.35));
+}
+
+.hero-discount-fan-sentinel {
+	position: absolute;
+	top: clamp(4rem, 12vh, 7rem);
+	left: clamp(0.5rem, 4vw, 2rem);
+	width: 1px;
+	height: 170px;
+	pointer-events: none;
+	visibility: hidden;
+}
+
+@media (max-width: 640px) {
+	.hero-discount-fan {
+		position: fixed;
+		top: auto;
+		bottom: max(1rem, env(safe-area-inset-bottom, 0px));
+		left: 0.5rem;
+		z-index: 40;
+	}
+
+	.hero-discount-fan,
+	.hero-discount-fan.hero-discount-fan--sticky {
+		top: auto;
+		bottom: max(1rem, env(safe-area-inset-bottom, 0px));
+		left: 0.5rem;
+	}
+
+	.hero-discount-fan img,
+	.hero-discount-fan.hero-discount-fan--sticky img {
+		width: 130px;
+	}
+
+	.hero-discount-fan-sentinel {
+		display: none;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.hero-discount-fan {
+		animation: none;
+		transition: none;
+	}
+
+	.hero-discount-fan img {
+		transition: none;
+	}
+}
+
+/* === Hero countdown emphasis (pulse + neon pink border) === */
+.countdown-wrapper[data-countdown-sticky] {
+	border: 1.5px solid rgba(240, 99, 125, 0.85);
+	animation: discount-urgency-pulse 2.2s ease-in-out infinite;
+	will-change: transform, box-shadow;
+}
+
+.countdown-wrapper[data-countdown-sticky].countdown-wrapper--sticky {
+	animation: none;
+	border-width: 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.countdown-wrapper[data-countdown-sticky] {
+		animation: none;
+		box-shadow:
+			0 0 18px 2px rgba(240, 99, 125, 0.35),
+			0 6px 18px rgba(240, 99, 125, 0.18);
+	}
+}
+
+/* === Sticky countdown === */
+.countdown-sticky-host {
+	width: 100%;
+}
+
+.countdown-sticky-sentinel {
+	height: 1px;
+	width: 100%;
+	pointer-events: none;
+}
+
+.countdown-wrapper.countdown-wrapper--sticky {
+	position: fixed;
+	bottom: max(1rem, env(safe-area-inset-bottom, 0px));
+	right: max(1rem, env(safe-area-inset-right, 0px));
+	z-index: 45;
+	width: min(280px, calc(100vw - 2rem));
+	margin: 0;
+	box-shadow: 0 12px 40px rgba(240, 99, 125, 0.28);
+	transform: translateY(0);
+	opacity: 1;
+	transition: transform 0.35s ease, opacity 0.35s ease, box-shadow 0.35s ease;
+}
+
+.countdown-wrapper.countdown-wrapper--sticky .countdown-number {
+	font-size: 1.25rem;
+}
+
+.countdown-wrapper.countdown-wrapper--sticky .countdown-box {
+	padding: 8px 2px 6px;
+}
+
+.countdown-wrapper.countdown-wrapper--sticky .countdown-header {
+	font-size: 0.75rem;
+	margin-bottom: 0.5rem;
+}
+
+@media (max-width: 480px) {
+	.countdown-wrapper.countdown-wrapper--sticky {
+		width: min(240px, calc(100vw - 1.5rem));
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.countdown-wrapper.countdown-wrapper--sticky {
+		transition: none;
+	}
+}
+
+/* === Discount urgency reminder === */
+@keyframes discount-urgency-pulse {
+	0%, 100% {
+		box-shadow:
+			0 0 0 0 rgba(240, 99, 125, 0.55),
+			0 0 18px 2px rgba(240, 99, 125, 0.35),
+			0 6px 18px rgba(240, 99, 125, 0.18);
+		transform: scale(1);
+	}
+	50% {
+		box-shadow:
+			0 0 0 8px rgba(240, 99, 125, 0),
+			0 0 28px 6px rgba(240, 99, 125, 0.55),
+			0 8px 22px rgba(240, 99, 125, 0.28);
+		transform: scale(1.015);
+	}
+}
+
+@keyframes discount-urgency-icon-pulse {
+	0%, 100% { transform: rotate(0deg) scale(1); }
+	50%      { transform: rotate(-6deg) scale(1.08); }
+}
+
+.discount-urgency {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.75rem;
+	margin-top: 1.25rem;
+	padding: 0.875rem 1rem;
+	background: linear-gradient(135deg, rgba(240, 99, 125, 0.12) 0%, rgba(255, 180, 200, 0.45) 100%);
+	border: 1.5px solid rgba(240, 99, 125, 0.85);
+	border-radius: 0.75rem;
+	text-align: left;
+	position: relative;
+	animation: discount-urgency-pulse 2.2s ease-in-out infinite;
+	will-change: transform, box-shadow;
+}
+
+.discount-urgency-icon {
+	flex-shrink: 0;
+	width: 56px;
+	height: 56px;
+	opacity: 1;
+	animation: discount-urgency-icon-pulse 2.2s ease-in-out infinite;
+	transform-origin: center;
+	filter: drop-shadow(0 4px 10px rgba(240, 99, 125, 0.4));
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.discount-urgency,
+	.discount-urgency-icon {
+		animation: none;
+	}
+
+	.discount-urgency {
+		box-shadow:
+			0 0 18px 2px rgba(240, 99, 125, 0.35),
+			0 6px 18px rgba(240, 99, 125, 0.18);
+	}
+}
+
+.discount-urgency-text {
+	margin: 0;
+	font-size: 0.875rem;
+	line-height: 1.5;
+	color: #4b5563;
+}
+
+.discount-urgency-text strong {
+	color: var(--primary-color);
+	font-weight: 700;
+}
+
+.discount-urgency-link {
+	display: inline-block;
+	margin-top: 0.25rem;
+	font-size: 0.8125rem;
+	font-weight: 600;
+	color: var(--primary-color);
+	text-decoration: underline;
+	text-underline-offset: 2px;
+}
+
+.discount-urgency-link:hover {
+	color: var(--secondary-color);
+}
