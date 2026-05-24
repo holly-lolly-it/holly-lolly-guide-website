@@ -137,7 +137,38 @@
   <main>
     <section id="hero-section" class="relative min-h-screen flex items-center justify-center parallax-bg max-w-full">
       <a href="#telegram" class="hero-discount-fan promo-discount" data-fan-sticky aria-label="Скидка 77% — перейти к оформлению">
-        <img src="/assets/images/discount-fan-ru.svg" alt="" width="140" height="140" loading="eager" />
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="fan-svg" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="ruFanBody" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#f0637d"/>
+              <stop offset="45%" stop-color="#f08195"/>
+              <stop offset="100%" stop-color="#ffb3c4"/>
+            </linearGradient>
+            <linearGradient id="ruFanInner" x1="50%" y1="0%" x2="50%" y2="100%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35"/>
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <g transform="rotate(-8 100 118)">
+            <path d="M100 18 C58 42 28 78 22 118 C20 132 24 148 36 158 C52 170 76 174 100 174 C124 174 148 170 164 158 C176 148 180 132 178 118 C172 78 142 42 100 18 Z" fill="url(#ruFanBody)"/>
+            <path d="M100 18 C58 42 28 78 22 118 C20 132 24 148 36 158 C52 170 76 174 100 174 C124 174 148 170 164 158 C176 148 180 132 178 118 C172 78 142 42 100 18 Z" fill="url(#ruFanInner)"/>
+            <g stroke="#fff" stroke-width="1.2" stroke-linecap="round" opacity="0.4">
+              <line x1="100" y1="28" x2="100" y2="162"/>
+              <line x1="100" y1="32" x2="62" y2="152"/>
+              <line x1="100" y1="32" x2="138" y2="152"/>
+              <line x1="100" y1="36" x2="48" y2="138"/>
+              <line x1="100" y1="36" x2="152" y2="138"/>
+              <line x1="100" y1="42" x2="36" y2="122"/>
+              <line x1="100" y1="42" x2="164" y2="122"/>
+            </g>
+            <ellipse cx="100" cy="168" rx="10" ry="6" fill="#e84d6a"/>
+            <circle cx="100" cy="168" r="3" fill="#fff" opacity="0.7"/>
+          </g>
+          <g font-family="system-ui,-apple-system,'Segoe UI',sans-serif" paint-order="stroke fill" stroke="#8c1f33" stroke-linejoin="round">
+            <text x="100" y="125" text-anchor="middle" fill="#fff" font-size="62" font-weight="900" letter-spacing="-2.5" stroke-width="2.5">77%</text>
+            <text x="100" y="152" text-anchor="middle" fill="#fff" font-size="18" font-weight="800" letter-spacing="3" stroke-width="1">&#1057;&#1050;&#1048;&#1044;&#1050;&#1040;</text>
+          </g>
+        </svg>
       </a>
       <div class="hero-discount-fan-sentinel" aria-hidden="true"></div>
       <div class="relative max-w-7xl sm:px-6 lg:px-8 py-20 max-w-full">
@@ -179,7 +210,7 @@
                 <span class="countdown-sakura countdown-sakura-right" aria-hidden="true">🌸</span>
                 <div class="countdown-header">
                   <span class="dot" aria-hidden="true"></span>
-                  <span data-countdown-message>Скидка 77% только до 1 июня</span>
+                  <span data-countdown-message>Скидка <strong>77%</strong> только до <span style="white-space:nowrap">1 июня</span></span>
                 </div>
                 <div class="countdown-row">
                   <div class="countdown-box">
@@ -637,9 +668,29 @@
             </a>
 
             <div class="discount-urgency promo-discount">
-              <img src="/assets/images/discount-fan-ru.svg" alt="" class="discount-urgency-icon" width="56" height="56" />
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="discount-urgency-icon" aria-hidden="true" focusable="false">
+                <defs>
+                  <linearGradient id="urgRuFanBody" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#f0637d"/><stop offset="45%" stop-color="#f08195"/><stop offset="100%" stop-color="#ffb3c4"/>
+                  </linearGradient>
+                  <linearGradient id="urgRuFanInner" x1="50%" y1="0%" x2="50%" y2="100%">
+                    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35"/><stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <g transform="rotate(-8 100 118)">
+                  <path d="M100 18 C58 42 28 78 22 118 C20 132 24 148 36 158 C52 170 76 174 100 174 C124 174 148 170 164 158 C176 148 180 132 178 118 C172 78 142 42 100 18 Z" fill="url(#urgRuFanBody)"/>
+                  <path d="M100 18 C58 42 28 78 22 118 C20 132 24 148 36 158 C52 170 76 174 100 174 C124 174 148 170 164 158 C176 148 180 132 178 118 C172 78 142 42 100 18 Z" fill="url(#urgRuFanInner)"/>
+                  <g stroke="#fff" stroke-width="1.5" stroke-linecap="round" opacity="0.4">
+                    <line x1="100" y1="28" x2="100" y2="162"/><line x1="100" y1="32" x2="62" y2="152"/><line x1="100" y1="32" x2="138" y2="152"/>
+                    <line x1="100" y1="36" x2="48" y2="138"/><line x1="100" y1="36" x2="152" y2="138"/>
+                  </g>
+                  <ellipse cx="100" cy="168" rx="10" ry="6" fill="#e84d6a"/>
+                  <circle cx="100" cy="168" r="3" fill="#fff" opacity="0.7"/>
+                </g>
+                <text x="100" y="130" text-anchor="middle" fill="#fff" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="68" font-weight="900" letter-spacing="-2" paint-order="stroke fill" stroke="#8c1f33" stroke-width="3" stroke-linejoin="round">77%</text>
+              </svg>
               <p class="discount-urgency-text">
-                <strong>Скидка 77% скоро закончится</strong> — успейте забрать гид до 1 июня.
+                <strong>Скидка 77% скоро закончится</strong> — успейте забрать гид до <span style="white-space: nowrap;">1 июня.</span>
                 <!-- <a href="#start" class="discount-urgency-link">Вернуться наверх</a> -->
               </p>
             </div>

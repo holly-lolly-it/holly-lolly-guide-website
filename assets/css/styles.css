@@ -111,7 +111,7 @@ html, body {
 	align-items: center;
 	justify-content: center;
 	gap: 0.5rem;
-	font-size: 0.8125rem;
+	font-size: 1.2rem;
 	font-weight: 700;
 	color: var(--primary-color);
 	letter-spacing: 0.3px;
@@ -265,7 +265,7 @@ html, body {
 	border-radius: 50%;
 }
 
-.hero-discount-fan img {
+.hero-discount-fan .fan-svg {
 	display: block;
 	width: 155px;
 	height: auto;
@@ -273,9 +273,15 @@ html, body {
 	transition: filter 0.25s ease;
 }
 
-.hero-discount-fan:hover img,
-.hero-discount-fan:focus-visible img {
+.hero-discount-fan:hover .fan-svg,
+.hero-discount-fan:focus-visible .fan-svg {
 	filter: drop-shadow(0 12px 28px rgba(240, 99, 125, 0.6));
+}
+
+@media (max-width: 640px) {
+	.hero-discount-fan .fan-svg {
+		width: 130px;
+	}
 }
 
 /* --sticky class no longer changes position (already fixed); kept for potential future use */
@@ -309,8 +315,8 @@ html, body {
 		left: 0.5rem;
 	}
 
-	.hero-discount-fan img,
-	.hero-discount-fan.hero-discount-fan--sticky img {
+	.hero-discount-fan .fan-svg,
+	.hero-discount-fan.hero-discount-fan--sticky .fan-svg {
 		width: 130px;
 	}
 
@@ -446,6 +452,7 @@ html, body {
 	flex-shrink: 0;
 	width: 56px;
 	height: 56px;
+	display: block;
 	opacity: 1;
 	animation: discount-urgency-icon-pulse 2.2s ease-in-out infinite;
 	transform-origin: center;
