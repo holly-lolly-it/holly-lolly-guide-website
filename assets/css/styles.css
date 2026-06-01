@@ -28,7 +28,7 @@
 	max-width: 100%;
 }
 
-/* .promo-discount { display: none !important; } */
+.promo-discount { display: none !important; }
 
 #hero-section {
 	background-image: linear-gradient(
